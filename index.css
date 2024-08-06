@@ -1,0 +1,173 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInDown 1s ease-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 3px solid #2575fc;
+    padding-bottom: 10px;
+    color: #333;
+    animation: slideInRight 1s ease-out;
+}
+
+/* List Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Job and Project Details */
+.job, .education-item, .project {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 20px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.job h3, .education-item h3, .project h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #2575fc;
+}
+
+.job span, .education-item span, .project span {
+    display: block;
+    color: #666;
+    margin-top: 5px;
+}
+
+.job p, .education-item p, .project p {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    animation: fadeInUp 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Additional Styling */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #fff;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out 1s;
+    animation-fill-mode: forwards;
+}
